@@ -1,0 +1,354 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* pagina de inicio */
+
+/* header - logo--menu */
+.menu__container {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+.header__inicio {
+    background-color: rgb(73, 64, 64);
+}
+.menu {
+    background-color:rgb(73, 64, 64);
+    display: flex;
+    justify-content: space-around;
+}
+.menu__list {
+    list-style-type: none;
+    margin: 0 0.5rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+}
+.menu__btn {
+    background-color: black;
+    color: rgb(116, 5, 5);
+    border: 0.2rem solid rgb(116, 5, 5);
+    font-size: 2rem;
+    padding: 0 0.4rem;
+}
+.img__container a {
+    display: flex;
+    justify-content: center;
+}
+.img__logo {
+    width: 8rem;
+    border: solid 3px rgb(116, 5, 5);
+}
+/* modificaciones en el main */
+
+.main__inicio {
+    background-image: url("multimedia/imagenes/fondomain3.jpeg");
+    background-size: cover;
+    height: 800px;
+}
+.musica__container {
+    display: flex;
+    justify-content: flex-end;
+}
+.musica {
+    margin: 2rem;
+}
+.central__element {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.element__audio {
+    position: relative;
+    bottom: 15rem;
+}
+.articulo__titulo {
+    font-size: 3em;
+    color: rgb(116, 5, 5);
+}
+.articulo__paragraph {
+    width: 300px;
+    font-size: 1.5em;
+    color: rgb(116, 5, 5);
+    margin: 0.5em;
+}
+.element__whatsapp {
+    color: black;
+    background-color: rgb(10, 197, 10);;
+    font-size: 2em;
+    position: fixed;
+    right: 1.5rem;
+
+}
+/* footer */
+footer {
+    background-color: rgb(73, 64, 64);
+}
+.pie__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sub__pie {
+    color: rgb(51, 9, 9);
+    font-size: 2.5em;
+    padding: 0.5rem 0;
+}
+.public__pie {
+    padding: 0.5rem 0;
+}
+.desc__pie {
+    padding: 0.5rem 0;
+}
+.three__container {
+    display: flex;
+    justify-content: center;
+}
+.info__pie {
+    text-align: center;
+    font-size: 12px;
+}
+/* Fin de pagina inicio*/
+
+/* pagina de entrenamiento */
+.main__entrenamiento {
+    background-image: url("multimedia/imagenes/fondoentrenamiento.jpeg");
+    background-size: cover;
+}
+.titulo__entrenamiento {
+    font-size: 5rem;
+    color: rgb(116, 5, 5);
+    text-align: center;
+}
+.item-uno { grid-area: titulo1; }
+.item-dos { grid-area: frame1; }
+.item-tres { grid-area: text1; }
+.item-cuatro { grid-area: titulo2; }
+.item-cinco { grid-area: frame2; }
+.item-seis { grid-area: text2; }
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+}
+.grid-container {
+    grid-template-areas:
+    'titulo1 titulo1 titulo1 titulo1 titulo1 titulo1'
+    'frame1 frame1 text1 text1 text1 text1'
+    'titulo2 titulo2 titulo2 titulo2 titulo2 titulo2'
+    'frame2 frame2 text2 text2 text2 text2';
+}
+@media only screen and (max-width: 800px) {
+    .grid-container {
+        justify-items: center;
+        grid-template-areas:
+        'titulo1'
+        'frame1'
+        'text1'
+        'titulo2'
+        'frame2'
+        'text2';
+    }
+    .titulo__entrenamiento {
+        font-size: 4rem;
+    }
+}
+.subtitulo__sentadillas {
+    font-size: 3rem;
+    color: rgb(255, 251, 0);
+    text-align: center;
+}
+.descp__sentadillas {
+    font-size: 1.5rem;
+    color: rgb(248, 203, 0);
+}
+.subtitulo__press {
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(255, 251, 0);
+}
+.descp__press {
+    font-size: 1.5rem;
+    color: rgb(248, 203, 0);
+}
+/* Fin pagina de entrenamiento*/
+
+/* Pagina de metodologia */
+.header__metodo {
+    background-color: rgb(73, 64, 64);
+}
+.main__metodo {
+    background-image: url("multimedia/imagenes/logotres.jpeg");
+    background-size: cover;
+}
+.titulo__metodo {
+    font-size: 5rem;
+    color: rgb(116, 5, 5);
+    text-align: center;
+}
+.caja-uno {grid-area: taek;}
+.caja_dos {grid-area: capoe;}
+.caja-tres {grid-area: kick;}
+.caja-cuatro {grid-area: karate;}
+
+.grid-container-metodo {
+    display: grid;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+.grid-container-metodo {
+    grid-template-areas:
+    'taek capoe'
+    'kick karate';
+}
+@media only screen and (max-width: 800px) {
+    .grid-container-metodo {
+        grid-template-areas:
+        'taek'
+        'capoe'
+        'kick'
+        'karate';
+    }
+    .titulo__metodo {
+        font-size: 4rem;
+    }
+}
+.subtitulo__taek {
+    font-size: 3rem;
+    color: rgb(199, 82, 4);
+    text-align: center;
+}
+.descp__taek {
+    font-size: 1.5rem;
+    color: rgb(248, 203, 0);
+}
+.subtitulo__capoe {
+    font-size: 3rem;
+    color: rgb(199, 82, 4);
+    text-align: center;
+}
+.descp__capoe {
+    font-size: 1.5rem;
+    color: rgb(248, 203, 0);
+}
+.subtitulo__kick {
+    font-size: 3rem;
+    color: rgb(199, 82, 4);
+    text-align: center;
+}
+.descp__kick {
+    font-size: 1.5rem;
+    color: rgb(248, 203, 0);
+}
+.subtitulo__karate {
+    font-size: 3rem;
+    color: rgb(199, 82, 4);
+    text-align: center;
+}
+.descp__karate {
+    font-size: 1.5rem;
+    color: rgb(248, 203, 0);
+}
+/* Fin pagina de metodologia */
+
+/* pagina de contactos */
+.header__contact {
+    background-color: rgb(73, 64, 64);
+    font-size: 6rem;
+    color: rgb(116, 5, 5);
+    text-align: center;
+}
+.main__contact {
+    background-image: url("multimedia/imagenes/fondoContact.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(73, 64, 64);
+}
+.box-uno {grid-area: titulo1;}
+.box-dos {grid-area: video1;}
+.box-tres {grid-area: texto1;}
+.box-cuatro {grid-area: titulo2;}
+.box-cinco {grid-area: video2;}
+.box-seis {grid-area: texto2;}
+
+.contact__container {
+    display: grid;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+.contact__container {
+    grid-template-areas: 
+    'titulo1 titulo1 titulo1'
+    'video1 texto1 texto1'
+    'titulo2 titulo2 titulo2'
+    'video2 texto2 texto2'
+}
+.subtitulo__lugar {
+    font-size: 3rem;
+    color: rgb(199, 82, 4);
+    text-align: center;
+}
+.descp__lugar {
+    font-size: 1.5rem;
+    color: rgb(199, 82, 4);
+}
+.subtitulo__compe {
+    font-size: 3rem;
+    color: rgb(199, 82, 4);
+    text-align: center;
+}
+.descp__compe {
+    font-size: 1.5rem;
+    color: rgb(199, 82, 4);
+}
+/* Fin pagina de contactos */
+
+/* pagina de ubicacion */
+.header__ubicacion {
+    background-color: rgb(73, 64, 64);
+    font-size: 3rem;
+    color: rgb(116, 5, 5);
+    text-align: center;
+}
+.main__ubicacion {
+    background-color: rgb(53, 39, 39)
+}
+.container__acceso {
+    display: flex;
+    align-items: center;
+}
+.subtitulo__trans {
+    font-size: 3rem;
+    color: rgb(199, 43, 4);
+    text-align: center;
+    padding: 0.5rem;
+}
+.descp__trans {
+    font-size: 1.5rem;
+    color: rgb(219, 167, 132);
+    padding: 0.5rem;
+}
+.descp__tren {
+    font-size: 1.5rem;
+    color: rgb(219, 167, 132);
+    padding: 0.5rem;
+}
+.container__gps {
+    display: flex;
+    
+}
+.subtitulo__gps {
+    font-size: 3rem;
+    color: rgb(199, 43, 4);
+    text-align: center;
+}
+.descp__gps {
+    font-size: 1.5rem;
+    color: rgb(219, 167, 132);
+}
+/* Fin pagina de ubicacion */
