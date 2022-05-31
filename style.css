@@ -352,3 +352,122 @@ footer {
     color: rgb(219, 167, 132);
 }
 /* Fin pagina de ubicacion */
+
+/* Pagina de Productos */
+header {
+    background-color: rgb(243, 178, 0);
+}
+.animasion {
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    font-size: 0;
+    line-height: 1.5;
+}
+span {
+    font-size: 5rem;
+    display: inline-block;
+
+    animation: anime 4.5s linear infinite;
+}
+
+@keyframes anime {
+0% {
+    transform: translate(-30%, 0);
+}
+50% {
+    text-shadow: 0 25px 50px rgb(255, 0, 0);
+}
+100% {
+    transform: translate(30%, 0);
+}
+}
+
+.animasion span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.animasion span:nth-child(3) {
+    animation-delay: 1s;
+}
+.animasion span:nth-child(4) {
+    animation-delay: 1.5s;
+}
+.animasion span:nth-child(5) {
+    animation-delay: 2s;
+}
+.animasion span:nth-child(6) {
+    animation-delay: 2.5s;
+}
+.animasion span:nth-child(7) {
+    animation-delay: 3s;
+}
+.animasion span:nth-child(8) {
+    animation-delay: 3.5s;
+}
+.animasion span:nth-child(9) {
+    animation-delay: 4s;
+}
+
+.box__uno {grid-area: prote;}
+.box__dos {grid-area: crea;}
+.box__tres {grid-area: amino;}
+.box__cuatro {grid-area: multi;}
+.box__cinco {grid-area: ultra;}
+.box__seis {grid-area: barras;}
+
+.container__productos {
+    display: grid;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+.container__productos {
+    grid-template-areas:
+    'prote crea'
+    'amino multi'
+    'ultra barras';
+}
+.container__productos div {
+    background-color: rgb(73, 26, 26);
+    text-align: center;
+    height: 20rem;
+}
+.img__prod {
+    width: 10%;
+}
+.container__productos div a {
+    width: 10rem;
+    height: 20rem;
+}
+div h2 {
+    font-size: 3rem;
+    color: rgb(243, 187, 187);
+    transition: all 0.5s linear;
+}
+div p {
+    font-size: 1rem;
+    color: rgb(243, 187, 187);
+    transition: all 0.5s linear;
+}
+h2:hover {
+    font-size: 3.5rem;
+    color: rgb(255, 255, 255);
+}
+.container__productos div p:hover {
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+}
+h1:hover {
+    font-size: 5.1rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-color: rgb(243, 6, 6);
+}
+.box__seis:hover .efecto-uno {
+    transform: translateX(10rem);
+}
+.box__seis:hover .efecto-dos {
+    transform: translateX(-10rem);
+}
+.box__tres:hover .efecto-tres {
+    transform: rotate(1);
+}
