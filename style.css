@@ -350,7 +350,7 @@ footer {
 /* Fin pagina de ubicacion */
 
 /* Pagina de Productos */
-header {
+.header-prod {
     background-color: rgb(243, 178, 0);
 }
 .animasion {
@@ -360,8 +360,8 @@ header {
     font-size: 0;
     line-height: 1.5;
 }
-span {
-    font-size: 5rem;
+.efecto-title {
+    font-size: 3rem;
     display: inline-block;
 
     animation: anime 4.5s linear infinite;
@@ -404,6 +404,26 @@ span {
     animation-delay: 4s;
 }
 
+.box-prod {
+    background-color: rgb(73, 26, 26);
+    text-align: center;
+    height: auto;
+}
+.img__prod {
+    width: 20%;
+}
+.prod-subtitle {
+    font-size: 2.5rem;
+    color: rgb(243, 187, 187);
+    transition: all 0.5s linear;
+}
+.box-prod p {
+    margin: 0.5rem;
+    font-size: 1rem;
+    color: rgb(243, 187, 187);
+    transition: all 1s linear;
+}
+
 .box__uno {grid-area: prote;}
 .box__dos {grid-area: crea;}
 .box__tres {grid-area: amino;}
@@ -418,52 +438,76 @@ span {
 }
 .container__productos {
     grid-template-areas:
-    'prote crea'
-    'amino multi'
-    'ultra barras';
+    'prote'
+    'crea'
+    'amino'
+    'multi'
+    'ultra'
+    'barras';
 }
-.container__productos div {
-    background-color: rgb(73, 26, 26);
-    text-align: center;
-    height: 20rem;
+@media screen and (min-width: 768px){
+    .container__productos {
+        grid-template-areas: 
+        'prote crea'
+        'amino multi'
+        'ultra barras';
+    }
+    .img__prod {
+        width: 20%;
+    }
+    .efecto-title {
+        font-size: 3.5rem;
+    }
+    .prod-subtitle {
+        font-size: 2.5rem;
+        color: rgb(246, 250, 26);
+    }
+    .box-prod p {
+        font-size: 1.5rem;
+        background-color: rgb(223, 188, 76);
+        color: black;
+    }
 }
-.img__prod {
-    width: 10%;
-}
-.container__productos div a {
-    width: 10rem;
-    height: 20rem;
-}
-div h2 {
-    font-size: 3rem;
-    color: rgb(243, 187, 187);
-    transition: all 0.5s linear;
-}
-div p {
-    font-size: 1rem;
-    color: rgb(243, 187, 187);
-    transition: all 0.5s linear;
-}
-h2:hover {
+@media screen and (min-width: 1200px){
+    .container__productos {
+        grid-template-areas:
+        'prote crea amino'
+        'multi ultra barras';
+    }
+    .box-prod p, .prod-subtitle {
+        margin: 1rem;
+    }
+    .img__prod {
+        width: 15%;
+    }
+    .efecto-title {
+        font-size: 5rem;
+    }
+    .prod-subtitle {
+        font-size: 3rem;
+        color: rgb(240, 93, 25);
+    }
+    .box-prod p {
+        font-size: 1.7rem;
+        background-color: rgb(226, 124, 77);
+        color: black;
+    }
+    .efecto-title {
+        font-size: 4rem;
+    }
+    .prod-subtitle:hover {
     font-size: 3.5rem;
     color: rgb(255, 255, 255);
+    }
+    .box-prod p:hover {
+        font-size: 1.8rem;
+        color: rgb(255, 255, 255);
+    }
+    .box__seis:hover .efecto-uno {
+        transform: translateX(10rem);
+    }
+    .box__seis:hover .efecto-dos {
+        transform: translateX(-10rem);
+    }
 }
-.container__productos div p:hover {
-    font-size: 1.1rem;
-    color: rgb(255, 255, 255);
-}
-h1:hover {
-    font-size: 5.1rem;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    background-color: rgb(243, 6, 6);
-}
-.box__seis:hover .efecto-uno {
-    transform: translateX(10rem);
-}
-.box__seis:hover .efecto-dos {
-    transform: translateX(-10rem);
-}
-.box__tres:hover .efecto-tres {
-    transform: rotate(1);
-}
+
